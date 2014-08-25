@@ -2,6 +2,6 @@
 <resources>
 
     <string name="app_name">Xposed AllCaps/NoCaps</string>
-    <string name="xposeddescription">Control capitalization of text in Android system and apps</string>
+    <string name="xposeddescription">Control capitalization of text in all system and app text boxes</string>
 
 </resources>
