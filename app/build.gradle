@@ -1,19 +1,29 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
+    compileSdkVersion 22
     buildToolsVersion "22.0.1"
 
     defaultConfig {
         applicationId "net.mitchtech.xposed.allcapsnocaps"
+        targetSdkVersion 22
         minSdkVersion 15
-        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
     }
 
     buildTypes {
+        debug {
+
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
 }
+
+dependencies {
+    provided fileTree(dir: 'libs', include: ['*.jar'])
+}
+

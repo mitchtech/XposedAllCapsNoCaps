@@ -1,16 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.mitchtech.xposed.allcapsnocaps"
-    android:versionCode="1"
-    android:versionName="1.0" >
-
-    <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="20" />
+    package="net.mitchtech.xposed.allcapsnocaps">
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:label="@string/app_name">
         <meta-data
             android:name="xposedmodule"
             android:value="true" />
@@ -23,7 +17,7 @@
 
         <activity
             android:name="net.mitchtech.xposed.AllCapsNoCapsPreferenceActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
