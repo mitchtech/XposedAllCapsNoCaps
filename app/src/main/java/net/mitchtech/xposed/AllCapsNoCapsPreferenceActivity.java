@@ -14,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.cgollner.unclouded.preferences.SwitchPreferenceCompat;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import net.mitchtech.xposed.allcapsnocaps.R;
 
@@ -28,9 +29,7 @@ public class AllCapsNoCapsPreferenceActivity extends AppCompatActivity {
 //        addPreferencesFromResource(R.xml.settings);
 
         if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, new SettingsFragment())
-                    .commit();
+            getFragmentManager().beginTransaction().add(android.R.id.content, new SettingsFragment()).commit();
         }
     }
 
@@ -89,6 +88,11 @@ public class AllCapsNoCapsPreferenceActivity extends AppCompatActivity {
                 return true;
         }
         return false;
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 
     public static String getVersion(Context context) {

@@ -1,9 +1,6 @@
 
 package net.mitchtech.xposed;
 
-import static de.robv.android.xposed.XposedHelpers.findAndHookConstructor;
-import static de.robv.android.xposed.XposedHelpers.findAndHookMethod;
-
 import android.content.Context;
 import android.graphics.Paint;
 import android.view.View;
@@ -17,6 +14,9 @@ import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XSharedPreferences;
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
+
+import static de.robv.android.xposed.XposedHelpers.findAndHookConstructor;
+import static de.robv.android.xposed.XposedHelpers.findAndHookMethod;
 
 public class XposedAllCapsNoCaps implements IXposedHookLoadPackage, IXposedHookZygoteInit {
 
